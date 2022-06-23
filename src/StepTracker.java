@@ -82,4 +82,14 @@ public class StepTracker {
         }
         return bestSeries;
     }
+
+    String getStatisticsString(int month){
+        return getDataForMonth(month) + "\n" +
+                "Общее количество шагов за месяц - " + calculateSummaryStepsForMonth(month) + "\n" +
+                "Максимальное пройденное количество шагов за месяц - " + findMaximumStepsForMonth(month) + "\n" +
+                "Среднее количество шагов в день - " + calculateAverageStepsForMonth(month) + "\n" +
+                "За месяц пройдена дистанция в " + calculateMonthDistance(month) + " км" + "\n" +
+                "За месяц cожжено " + calculateMonthCalories(month) + " ккал" + "\n" +
+                "Лучшая  серия в выбранном месяце составила " + findBestSeries(month) + " дней";
+    }
 }
