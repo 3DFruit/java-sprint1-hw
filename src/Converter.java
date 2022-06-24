@@ -4,6 +4,6 @@ public class Converter {
     }
 
     double convertStepsToKilocalories (int steps){
-        return steps * 50 / 1000;
+        return steps * 50.0 / 1000;
     }
 }

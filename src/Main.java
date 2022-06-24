@@ -21,7 +21,7 @@ public class Main {
                 System.out.println("Сколько шагов в этот день вы прошли?");
                 int steps = inputSteps(scanner);
 
-                stepTracker.writeStepsCount(month, day, steps);
+                stepTracker.setStepsAmount(month, day, steps);
                 System.out.println("Данные внесены.");
 
             } else if (menuIndex == 2) {
@@ -60,7 +60,7 @@ public class Main {
             }
             else break;
         } while(true);
-        return month;
+        return --month;
     }
 
     public static int inputDay(Scanner scanner){
@@ -72,7 +72,7 @@ public class Main {
             }
             else break;
         } while(true);
-        return day;
+        return --day;
     }
 
     public static int inputSteps(Scanner scanner){
